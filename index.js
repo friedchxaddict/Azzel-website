@@ -2,7 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const app = express();
 const cors = require("cors");
-const port = 4000
+const port = process.env.PORT || 4000
 
 mongoose.connect("mongodb+srv://adrian:adrian@cluster0.1nbs0.mongodb.net/Azzel-website?retryWrites=true&w=majority",
 	{

@@ -19,6 +19,10 @@ db.once('open',()=>console.log("Connected to MongoDB"))
 app.use(cors());
 app.use(express.json());
 
+app.get('/', function(request, response) {
+ response.send('Hello World!');
+ });
+
 const userRoutes = require('./routes/userRoutes');
 app.use('/users',userRoutes);
 
